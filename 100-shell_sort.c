@@ -1,7 +1,10 @@
+#include "sort.h"
+
 /**
 *swap - the positions of 2 elems in an array are swapped
 *@item1: array element 1
 *@item2: array element2
+*@array: array to be sorted
 * Return: void
 */
 
@@ -11,13 +14,14 @@ void swap(int *array, int item1, int item2)
 
 	temp = array[item1];
 	array[item1] = array[item2];
-	temp = array[item2];
+	array[item2] = temp;
 }
 
 /**
 * shell_sort - function sorts an array in ascdng order by Shell sort
 *algorithm following the Knuth sequence
-*
+*@array: array to be sorted
+*@size: array size
 * Return: void
 */
 

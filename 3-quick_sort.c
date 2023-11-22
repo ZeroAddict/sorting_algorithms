@@ -10,11 +10,10 @@
 
 void swap_values(int **array, ssize_t i1, ssize_t i2)
 {
-	int tmp;
+	int tmp = (*array)[i1];
 
-	tmp = (*array)[i1];
 	(*array)[i1] = (*array)[i2];
-	tmp = (*array)[i2];
+	(*array)[i2] = tmp;
 }
 
 /**
